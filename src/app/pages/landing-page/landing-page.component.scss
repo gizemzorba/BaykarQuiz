@@ -67,3 +67,48 @@
     }
   }
 }
+.bottom-area{
+  height: 200px;
+}
+.best-of-area {
+  background-color: #0f172a;
+
+  .container {
+
+
+    .row {
+      .card {
+        flex: 1;
+        height: 450px;
+        margin: 15px;
+        padding: 0;
+        background-color: #0f172a;
+        box-shadow: 0 8px 17px #303747;
+        color: white;
+        .card-body{
+          .btn{
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 100%;
+          }
+        }
+      }
+
+      .d-flex {
+        h1 {
+          flex: 1;
+          color: white;
+        }
+        .btn{
+          background: transparent;
+          color: white;
+          border: 1px solid white;
+          border-radius: 10px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
