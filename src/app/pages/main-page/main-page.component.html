@@ -1,0 +1,93 @@
+<div class="quiz-container" *ngIf="quizFinish == false">
+  <form [formControl]="questionsForm">
+
+    <h1>Quiz Uygulaması</h1>
+    <div class="question" *ngFor="let question of jsonDatas; let i = index ">
+      <div *ngIf="question.id == currentPage">
+        <p>{{ question.title }}</p>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" [value]="question.optionA" [name]="question.id.toString()" (click)="selectOption($event,question.id)"
+                     [disabled]="!canAnswer">
+              {{ question.optionA }}
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" [value]="question.optionB" [name]="question.id.toString()" (click)="selectOption($event,question.id)"
+                     [disabled]="!canAnswer">
+              {{ question.optionB }}
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" [value]="question.optionC" [name]="question.id.toString()"  (click)="selectOption($event,question.id)"
+                     [disabled]="!canAnswer">
+              {{ question.optionC }}
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" [value]="question.optionD" [name]="question.id.toString()"  (click)="selectOption($event,question.id)"
+                     [disabled]="!canAnswer">
+              {{ question.optionD }}
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="btn-group">
+      <!-- <button (click)="previousQuestion()">Geri</button>  -->
+      <button (click)="nextQuestion()" [disabled]="!canAnswer">İleri</button>
+    </div>
+  </form>
+  <div *ngIf="timerValue">Kalan süre: {{ timerValue }} saniye</div>
+</div>
+<div class="quiz-container" *ngIf="quizFinish == true">
+  <h1>Quiz Tamamlandı!</h1>
+  <table>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>{{ questionsForm.value['1'] }}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>{{ questionsForm.value['2'] }}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>{{ questionsForm.value['3'] }}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>{{ questionsForm.value['4'] }}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>{{ questionsForm.value['5'] }}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>{{ questionsForm.value['6'] }}</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>{{ questionsForm.value['7'] }}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>{{ questionsForm.value['8'] }}</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>{{ questionsForm.value['9'] }}</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>{{ questionsForm.value['10'] }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
