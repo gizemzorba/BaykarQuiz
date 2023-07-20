@@ -67,26 +67,32 @@
     }
   }
 }
-.bottom-area{
-  height: 200px;
+
+.bottom-area {
+  min-height: 200px;
+  height: 100%;
 }
+
 .best-of-area {
   background-color: #0f172a;
+  min-height: 700px;
+  height: 100%;
 
   .container {
 
 
     .row {
       .card {
-        flex: 1;
         height: 450px;
-        margin: 15px;
+        margin: auto;
         padding: 0;
         background-color: #0f172a;
         box-shadow: 0 8px 17px #303747;
         color: white;
-        .card-body{
-          .btn{
+        width: 400px;
+
+        .card-body {
+          .btn {
             background: transparent;
             color: white;
             border: 1px solid white;
@@ -101,7 +107,8 @@
           flex: 1;
           color: white;
         }
-        .btn{
+
+        .btn {
           background: transparent;
           color: white;
           border: 1px solid white;
@@ -110,5 +117,50 @@
         }
       }
     }
+  }
+}
+
+.why-join-us {
+  min-height: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    background-color: white;
+    padding: 70px;
+    border-radius: 15px;
+
+    .left {
+      h1 {
+      }
+
+      ul {
+        list-style: none;
+        padding: 0 !important;
+
+        li {
+        }
+      }
+
+      .btn {
+        background: transparent;
+        color: #78350f;
+        border: 2px solid #78350f;
+        border-radius: 10px;
+        width: 200px;
+      }
+    }
+
+    .right {
+      img {
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 0 20px #afacac;
+        border-radius: 20px;
+      }
+    }
+
   }
 }
