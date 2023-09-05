@@ -1,6 +1,6 @@
-# BaykarQuiz
+# QuizProject
 
-BU PROJEDE İSTENİLEN ARAYÜZ ÇALIŞMASI İÇİNE QUIZ APP KONULMUŞTUR.
+BU PROJEDE TASARIMI YAPILAN ARAYÜZ ÇALIŞMASI İÇİNE QUIZ APP KONULMUŞTUR. İLGİLİ QUIZ'E HEADERDAN GİDEBİLİRSİNİZ.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
